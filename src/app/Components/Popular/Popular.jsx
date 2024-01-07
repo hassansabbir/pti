@@ -19,7 +19,7 @@ const Popular = () => {
         .then(res => res.json())
         .then(data => setItems(data.Items))
         .catch((error) => console.error('Error fetching data:', error));
-    } ,[])
+    } ,[setItems])
 
     const handleAddItem = (data) => {
         const newItem = {
